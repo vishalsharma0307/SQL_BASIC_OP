@@ -138,58 +138,100 @@ select brandname,discount_price,ratings
  where discount_price < 500  and ratings > 4 ;
 
 ########################################################
+-- 🟠 ADVANCED LEVEL
+
+-- Find the top 5 brands with the highest number of products.
+
+-- Find the average price for each category.
+
+-- Find products where DiscountPrice is less than 60% of OriginalPrice.
+
+-- Find the top 10 most reviewed products.
+
+-- Find brands whose average rating is greater than 4.
+
+-- Find the category that has the highest average price.
+
+-- Find top 5 brands with the highest average rating.
+
+-- Find brands that sell products for both Men and Women.
+#########################################################
+
+## 18 .- Find the top 5 brands with the highest number of products.
+use flipkart;
+select * from product;
+
+select * 
+from count_of_units_perbrand
+order by count_of_product desc
+limit 5;
+
+## 19 .Find the average price for each category.
+select * from product;
+select category, round(avg(original_price),2)as avg_price
+from product
+group by category;
+
+## 20. Find products where DiscountPrice is less than 60% of OriginalPrice.
+select * from product;
+describe product;
+
+-- alter table product
+-- modify discountoffer int;
+
+create view prod as
+select * from product;
+--  
+select * from prod;
+select discountoffer from prod;
+set sql_safe_updates=0;
+update prod
+set discountoffer = replace(discountoffer,'% OFF','');
+
+update prod
+set discountoffer =0
+where discountoffer ='';
+
+select * from prod
+where discountoffer < 60;
+select * from product;
+
+## 21 .-- Find the top 10 most reviewed products.
+select * from product
+order by reviews desc 
+limit 10;
+
+## 22 . -- Find brands whose average rating is greater than 4.
+
+select brandname,round(avg(ratings),1)as avg_of_brand from product
+group by brandname 
+having avg_of_brand >4;
+
+## 23 .-- Find the category that has the highest average price.
+select category ,round(avg(original_price),1)as avg_category 
+from product
+group by category;
+
+## 24 .-- Find top 5 brands with the highest average rating.
+
+select brandname,round(avg(ratings),1)as avg_of_brand from product
+group by brandname 
+having avg_of_brand >4 
+order by avg_of_brand desc
+limit 5;
+
+## 25 .-- Find brands that sell products for both Men and Women.
+select * from product;
+select brandname from product
+where category_by_gender in ('men','women')
+group by brandname
+  ;
+  
+SELECT brandname
+FROM product
+WHERE category_by_gender IN ('Men','Women')
+GROUP BY brandname
+HAVING COUNT(DISTINCT category_by_gender) = 2;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- where category_by_gender = 'men' & category_by_gender = 'women
