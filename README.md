@@ -50,7 +50,65 @@ select * from count_of_units_perBrand;
 
 3.Data Analysis & Findings<br>
 The following SQL queries were developed to answer specific business questions:
+<br>List of Problems That are solved:<br>
+🟢 BASIC LEVEL (Start Here)
 
+Show all records from the product table.
+
+Show only the following columns:
+BrandName, Category, DiscountPrice (in Rs).
+
+Find all products where category_by_Gender = 'Men'.
+
+Show products where DiscountPrice is greater than 1000.
+
+Find products where BrandName = 'Nike'.
+
+Show products where Ratings are greater than 4.
+
+Display the first 20 rows from the table.
+
+Show all unique brand names in the dataset.
+
+🟡 INTERMEDIATE LEVEL
+
+Count the total number of products.
+
+Find the number of products for each brand.
+
+Find the average DiscountPrice of all products.
+
+Find the maximum and minimum DiscountPrice.
+
+Show the top 10 most expensive products.
+
+Count how many products are available for each gender.
+
+Find the average rating for each brand.
+
+Find brands that have more than 50 products.
+
+Show products where DiscountPrice is less than 500 and Ratings > 4.
+
+🟠 ADVANCED LEVEL
+
+Find the top 5 brands with the highest number of products.
+
+Find the average price for each category.
+
+Find products where DiscountPrice is less than 60% of OriginalPrice.
+
+Find the top 10 most reviewed products.
+
+Find brands whose average rating is greater than 4.
+
+Find the category that has the highest average price.
+
+Find top 5 brands with the highest average rating.
+
+Find brands that sell products for both Men and Women.
+<hr>
+<hr>
 
 
 
