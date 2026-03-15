@@ -19,3 +19,14 @@ Database: flipkart
   Product_id,BrandName,	Category,Individual_category,category_by_Gender,Description,	discount_price,	original_price,	DiscountOffer,	SizeOption,	Ratings & Reviews .
   </li>
 </ul>
+
+```sql
+create database Flipkart;
+use Flipkart;
+select	* from product;
+##### Droping a Coloumn  
+alter table product
+drop column url; 
+
+select	* from product;
+```
