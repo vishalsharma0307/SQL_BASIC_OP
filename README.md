@@ -48,7 +48,7 @@ group by brandname ;
 select * from count_of_units_perBrand;
 ```
 
-3. Data Analysis & Findings
+3.Data Analysis & Findings<br>
 The following SQL queries were developed to answer specific business questions:
 
 
