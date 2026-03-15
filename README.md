@@ -30,3 +30,46 @@ drop column url;
 
 select	* from product;
 ```
+2.Data Exploration & Cleaning
+
+<ul>
+<li>Record Count: Determine the total number of records in the dataset.</li>
+<li>Product Count: Find out how many unique Products are in the dataset.</li>
+
+```sql
+select	* from product;
+## Creating view of count_per_unit_sale
+
+create view count_of_units_perBrand as
+SELECT brandname,count(brandname) as Count_of_product
+from product 
+group by brandname ;
+##calling of a view
+select * from count_of_units_perBrand;
+```
+
+3. Data Analysis & Findings
+The following SQL queries were developed to answer specific business questions:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
