@@ -2,6 +2,8 @@
 <h2> Project Overview </h2><br>
 Project Title: Sales Analysis   <br> 
 Database: flipkart
+Data Source :https://www.kaggle.com/datasets/manishmathias/myntra-fashion-dataset?resource=download 
+
 <h4>This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze sales data. The project involves setting up a sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries.</h4>
 
 <h2>Objectives</h2>
@@ -293,15 +295,20 @@ HAVING COUNT(DISTINCT category_by_gender) = 2;
 
 -- where category_by_gender = 'men' & category_by_gender = 'women
 ```
+Findings:
+<br>
+<ul>
+<li>High-Value Transactions: Brands with high discount and higher ratings .</li>
+<li>Top Brands : Top Brands with Highest Number of Products .</li>
+<li>Categorise : AS Men and Women produscts</li>
+
+<br>
+<h2>Conclusion</h2>
+This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
 
 
 
-
-
-
-
-
-
+<h1>Thank you, and I look forward to connecting with you!
 
 
 
